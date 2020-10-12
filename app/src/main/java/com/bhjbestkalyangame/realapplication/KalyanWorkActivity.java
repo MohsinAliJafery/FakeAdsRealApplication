@@ -35,6 +35,11 @@ import com.google.android.gms.ads.rewarded.RewardedAd;
 import com.google.android.gms.ads.rewarded.RewardedAdCallback;
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -55,6 +60,7 @@ public class KalyanWorkActivity extends AppCompatActivity {
     private AdView mAdView;
     boolean tellMe;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -69,6 +75,12 @@ public class KalyanWorkActivity extends AppCompatActivity {
         TotalCoins = findViewById(R.id.total_coins);
         getGoldCoins = findViewById(R.id.get_gold_coins);
         mTitle = this.findViewById(R.id.updated_on);
+
+
+
+
+
+
 
         mTitle.setSelected(true);
 

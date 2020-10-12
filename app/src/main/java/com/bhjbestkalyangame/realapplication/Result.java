@@ -176,7 +176,7 @@ public class Result extends AppCompatActivity {
 //            mManager.notify(1, mBuilder.build());
 
 
-        mTitle.setText(mFrom + " Bet Game");
+        mTitle.setText(mFrom + " Kalyan Matka");
         Numbers = new HashMap<String, String>();
         mDatabase = FirebaseDatabase.getInstance();
         mReference = mDatabase.getReference("current_lucky_numbers").child(mFrom);
@@ -193,7 +193,7 @@ public class Result extends AppCompatActivity {
                 progressBar.setVisibility(View.GONE);
 
                 TCoins = mSharedPreferences.getInt(Coins, 0);
-                TCoins = TCoins - 2;
+                TCoins = TCoins + 2;
                 mSharedPreferences.edit().putInt(Coins, TCoins).apply();
 
                 Snackbar.make(mLayout, "You spent 2 coins", Snackbar.LENGTH_LONG)
